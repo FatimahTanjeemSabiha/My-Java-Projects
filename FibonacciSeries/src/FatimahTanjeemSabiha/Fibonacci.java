@@ -1,0 +1,27 @@
+package FatimahTanjeemSabiha;
+
+import java.util.Scanner;
+
+public class Fibonacci {
+
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the number of terms: \n");
+        int n=sc.nextInt();
+        int i=0,j=1,nextTerm;
+        System.out.println("The fibonacci series is: ");
+
+        for(int c=0;c<n;c++)
+        {
+            if(c<=1)
+                nextTerm=c;
+            else
+            {
+                nextTerm=i+j;
+                i=j;
+                j=nextTerm;
+            }
+            System.out.println(nextTerm);
+        }
+    }
+}
